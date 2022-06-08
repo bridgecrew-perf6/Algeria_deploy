@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-import os
 import numpy as np
 import pickle
 import logging
@@ -99,4 +98,4 @@ def Api_test():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0",debug=True,port=os.environ['PORT'])
+    app.run(debug=True)
