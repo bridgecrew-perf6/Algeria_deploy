@@ -33,7 +33,7 @@ def process_data(data):
         print("Error in Preprocessing")
 
 # Route URL
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def home():
     # Set Index HTML
     return render_template('home.html')
@@ -69,7 +69,7 @@ def Form_page():
         return render_template('home.html')
 
 
-@app.route('/predict_api', methods=["GET", "POST"])
+@app.route('/predict_api', methods=["POST"])
 def Api_test():
     try:
         logging.info("Requested Through API")
